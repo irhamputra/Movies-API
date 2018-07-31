@@ -12,6 +12,15 @@ const typeDefs = gql`
         date: String
     }
     
+    type User {
+        _id: String
+        name: String
+        email: String
+        password: String
+        avatar: String
+        date: String
+    }
+    
     type Query {
         allCinemas(
             name: String
@@ -24,6 +33,8 @@ const typeDefs = gql`
         ): [Cinema]!
         
         getCinema(id: String!): Cinema!
+        
+        getUser(id: String!): User!
     }
 `;
 
