@@ -8,6 +8,7 @@
     "dev": "nodemon --exec babel-node index.js"
   },
   "dependencies": {
+    "apollo-server": "^2.0.0",
     "apollo-server-express": "^2.0.0",
     "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
