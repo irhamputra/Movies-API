@@ -19,13 +19,11 @@ export default {
         },
 
         getCinema: async (_, args, { Cinema }) => {
-            const cinema = await Cinema.findById(args.id);
-            return cinema;
+            return await Cinema.findById(args.id);
         },
 
         getUser: async (_, args, { User }) => {
-            const user = await User.findById(args.id);
-            return user
+            return await User.findById(args.id)
         }
     }
 }

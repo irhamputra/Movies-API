@@ -26,4 +26,4 @@ const server = new ApolloServer({
     debug: true
 });
 
-server.listen().then(({url}) => console.log(`Apollo server is running on ${url}`));
+server.listen().then(({url}) => console.log(`🚀 Apollo server is running on ${url}`));
