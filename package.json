@@ -1,0 +1,29 @@
+{
+  "name": "node-gql-fs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Muhamad Irham Prasetyo",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --exec babel-node index.js"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.0.0",
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.6.1",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "graphql": "^0.13.2",
+    "graphql-playground-middleware-express": "^1.7.2",
+    "graphql-tools": "^3.0.5",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.3"
+  }
+}
