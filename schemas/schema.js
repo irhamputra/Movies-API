@@ -34,6 +34,13 @@ const typeDefs = gql`
         
         getCinema(id: String!): Cinema!
         
+        allUsers(
+            name: String
+            email: String
+            password: String
+            avatar: String
+        ): [User]!
+        
         getUser(id: String!): User!
     }
 `;
