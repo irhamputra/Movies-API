@@ -25,5 +25,22 @@ export default {
         getUser: async (_, args, { User }) => {
             return await User.findById(args.id)
         }
+    },
+
+    Mutation: {
+        addCinema: async (_, {name, description, videoURL, likes, country, imageURL, rating, duration, genre, releaseDate}, { Cinema }) => {
+            return new Cinema({
+                name,
+                description,
+                videoURL,
+                likes,
+                country,
+                imageURL,
+                rating,
+                duration,
+                genre,
+                releaseDate
+            }).save();
+        }
     }
 }

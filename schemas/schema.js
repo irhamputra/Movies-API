@@ -1,20 +1,24 @@
 import { gql } from 'apollo-server';
 const typeDefs = gql`
     type Cinema {
-        _id: String
+        _id: ID
         name: String
         description: String
         videoURL: String
         genre: String
         releaseDate: String
-        views: Int
         rating: Int
         date: String
+        country: String
+        imageURL: String
+        duration: Int
+        createdAt: String
     }
     
     type User {
-        _id: String
+        _id: ID
         name: String
+        username: String! @unique
         email: String
         password: String
         avatar: String
@@ -36,12 +40,28 @@ const typeDefs = gql`
         
         allUsers(
             name: String
+            username: String
             email: String
             password: String
             avatar: String
         ): [User]!
         
         getUser(id: String!): User!
+    }
+    
+    type Mutation {
+        addCinema(
+            name: String!
+            description: String
+            videoURL: String!
+            likes: Int
+            country: String!
+            imageURL: String!
+            rating: String!
+            duration: String!
+            genre: String!
+            releaseDate: String
+        ): Cinema!
     }
 `;
 
