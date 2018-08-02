@@ -19,10 +19,17 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
-    avatar: String,
-    date: {
+    avatar: {
+        type: String,
+        required: true
+    },
+    joinDate: {
         type: Date,
         default: Date.now()
+    },
+    favorites: {
+        type: [Schema.Types.ObjectId],
+        ref: 'Cinema'
     }
 });
 
