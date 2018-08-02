@@ -29,7 +29,7 @@ export default {
 
     Mutation: {
         addCinema: async (_, {name, description, videoURL, likes, country, imageURL, rating, duration, genre, releaseDate}, { Cinema }) => {
-            return new Cinema({
+            return await new Cinema({
                 name,
                 description,
                 videoURL,
